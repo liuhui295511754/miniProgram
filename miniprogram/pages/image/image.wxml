@@ -1,0 +1,18 @@
+<!--pages/image/image.wxml-->
+<!-- 2.src: 本地路径(相对路径/绝对路径) / 远程路径-->
+<image src="../../assets/tabbar/7.png"/>
+<image src="/assets/tabbar/7.png"/>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+
+<!-- 补充：选择相册中的图片或拍照 -->
+<button bindtap="handleChooseImage">选择图片</button>
+<image src="{{imagePath}}"/>
+
+<!-- bindload:当图片载入完毕时触发; lazy-load:图片懒加载 -->
+<image wx:for="{{10}}"
+       wx:key="item"
+       src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+       bindload="handerLoadFinish"
+       lazy-load
+       show-menu-by-longpress
+       />

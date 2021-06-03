@@ -1,0 +1,5 @@
+/* pages/image/image.wxss */
+.image-item {
+  height: 100px;
+  width: 100px;
+}
