@@ -1,0 +1,6 @@
+<!--pages/wxss/wxss.wxml-->
+<view class="content1">so beautifull!</view>
+<view class="content2">Hello Kevin</view>
+
+<!-- 2.给item, index起名字 -->
+<view wx:for="{{movies}}" wx:key="item" wx:for-item="movies" wx:for-index="i">{{movies}} {{i}}</view>

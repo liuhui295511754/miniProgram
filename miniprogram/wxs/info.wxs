@@ -1,0 +1,17 @@
+  // 2.wxs的定义方式
+  var message = 'Hello Kitty';
+  var name = 'kevin';
+  var bar = function(a, b) {
+    return a * b;
+  }
+  function sum(num1, num2) {
+    return num1 + num2
+  }
+  
+  //commonjs的模块化导出
+  module.exports = {
+    message: message,
+    name: name,
+    bar: bar,
+    sum: sum
+  }

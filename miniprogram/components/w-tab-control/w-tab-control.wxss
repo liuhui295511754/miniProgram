@@ -1,0 +1,18 @@
+/* components/w-tab-control/w-tab-control.wxss */
+.tab-control {
+  display: flex;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.tab-item {
+  flex: 1;
+  font-size: 35rpx;
+  text-align: center;
+}
+.active {
+  color: pink;
+}
+.text {
+  padding: 20rpx 16rpx;
+  border-bottom: 10rpx solid pink;
+}

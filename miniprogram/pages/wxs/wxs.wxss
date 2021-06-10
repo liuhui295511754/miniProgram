@@ -1,0 +1,29 @@
+/* pages/wxs/wxs.wxss */
+.box {
+  width: 300rpx;
+  height: 300rpx;
+  background-color: pink;
+}
+.container {
+  display: flex;
+}
+.item {
+  flex: 1;
+  text-align: center;
+}
+
+.view1 {
+  height: 500rpx;
+  width: 500rpx;
+  background-color: pink;
+}
+.view2 {
+  height: 350rpx;
+  width: 350rpx;
+  background-color: skyblue;
+}
+.view3 {
+  height: 200rpx;
+  width: 200rpx;
+  background-color: purple;
+}

@@ -1,7 +1,14 @@
 {
   "pages": [
+    "pages/main/main",
+    "pages/home/home",
+    "pages/wxs/wxs",
+    "pages/wxss/wxss",
+    "pages/scroll/scroll",
+    "pages/input/input",
     "pages/image/image",
-    "pages/view/view"
+    "pages/view/view",
+    "pages/detail/detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ff5777",
@@ -11,5 +18,15 @@
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/main/main",
+      "text": "主要"
+    }]
+  }
 }

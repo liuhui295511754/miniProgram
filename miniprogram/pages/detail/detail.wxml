@@ -1,0 +1,3 @@
+<view>帅哥，你好！</view>
+<navigator url="/pages/input/input">跳转到input界面</navigator>
+<navigator open-type="navigateBack">返回</navigator>

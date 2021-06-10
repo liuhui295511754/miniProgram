@@ -1,0 +1,10 @@
+<!--pages/input/input.wxml-->
+<input type="text" 
+       bindinput="a"
+       bindfocus="b"
+       bindblur="c"
+       bindconfirm="d"/>
+<view>哈喽，你好，周杰伦！</view>
+
+<!-- delta="2" 表示返回两个层级 -->
+<navigator open-type="navigateBack" delta="2">返回到首页</navigator>

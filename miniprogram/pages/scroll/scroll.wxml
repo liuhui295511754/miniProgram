@@ -1,0 +1,23 @@
+<!--pages/scroll/scroll.wxml-->
+<!-- 1.水平滚动 -->
+<scroll-view class="contailer1" scroll-x>
+  <view wx:for="{{10}}" wx:key="item" class="item1">{{item}}</view>
+</scroll-view>
+<!-- 2.垂直滚动 -->
+<scroll-view class="contailer2" scroll-y>
+  <view wx:for="{{10}}" wx:key="item" class="item2">{{item}}</view>
+</scroll-view>
+<!-- 3.其他 -->
+<scroll-view class="contailer3" 
+             scroll-y
+             bindscroll="handerScroll">
+  <view wx:for="{{10}}" wx:key="item" class="item3">{{item}}</view>
+</scroll-view>
+
+<!-- 4.Mustache语法 -->
+<view>{{age >= 18 ? '成年人': '未成年人'}}</view>
+<view>{{nowTime}}</view>
+
+<!-- 4.2 Mustache中绑定属性的用法 -->
+<view class="box {{isActive ? 'active' : ''}}">哈哈哈</view>
+<button size="mini" bindtap="handlerColor">切换颜色</button>

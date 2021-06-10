@@ -1,0 +1,11 @@
+/* components/my-cpn/my-cpn.wxss */
+.title {
+  font-size: 50rpx;
+  margin: 5rpx 10rpx;
+  text-align: center;
+}
+.content {
+  color: skyblue;
+  font-size: 30rpx;
+  text-align: center;
+}

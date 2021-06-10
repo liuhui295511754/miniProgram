@@ -1,0 +1,76 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- 2.wxs的定义方式  -->
+<!-- 2.1 直接在.wxml中定义 -->
+<!-- <wxs module="info">
+  var message = 'Hello Kitty';
+  var name = 'kevin';
+  var bar = function(a, b) {
+    return a * b;
+  }
+  function sum(num1, num2) {
+    return num1 + num2
+  }
+  
+  //commonjs的模块化导出
+  module.exports = {
+    message: message,
+    name: name,
+    bar: bar,
+    sum: sum
+  }
+</wxs> -->
+
+<!-- 2.2 定义在单独的wxs文件中，再使用<wxs>标签进行导入 -->
+<wxs src="/wxs/info.wxs" module="info"/>
+
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.bar(10, 20)}}</view>
+<view>{{info.sum(10, 20)}}</view>
+
+<wxs src="/wxs/format.wxs" module="format"/>
+<view>{{format.priceFormat(price, 3)}}</view>
+
+<button bindtap="handleBtnClick" size="mini">按钮点击</button>
+<button bind:tap="handleBtnClick" size="mini">按钮点击</button>
+<button catch:tap="handleBtnClick" size="mini">按钮点击</button>
+<button mut-bind:tap="handleBtnClick" size="mini">按钮点击</button>
+
+
+<!-- 3.1 事件处理回顾 -->
+<button size="mini" bindtap="handleBtnClick1">按钮1</button>
+<button size="mini" bind:tap="handleBtnClick2">按钮2</button>
+<button size="mini" catch:tap="handleBtnClick3">按钮3</button>
+
+<!-- 3.2 常见的事件类型 -->
+<view class="box"
+      bind:touchstart="handleTouchStart"
+      bind:touchmove="handleTouchMove"
+      bind:touchend="handleTouchEnd"
+      bind:tap="handleTap"
+      bind:longpress="handleLongPress"
+      >
+      </view>
+
+<!-- 4.事件传递参数 -->
+<view class="container">
+  <block wx:for="{{titles}}" wx:key="index">
+    <view class="item" 
+          bindtap="handleItemClick"
+          data-index="{{index}}"
+          data-item="{{item}}"
+          >
+      {{item}}
+    </view>
+  </block>
+</view>
+
+<!-- 5.事件冒泡和事件捕获 -->
+<!-- bind: 一层层传递 -->
+<!-- catch: 阻止事件的进一步传递 -->
+<view class="view1" capture-bind:tap="handleCaptureView1" bindtap="handleBindView1">
+  <view class="view2" capture-catch:tap="handleCaptureView2" bindtap="handleBindView2">
+    <view class="view3" capture-bind:tap="handleCaptureView3" bindtap="handleBindView3">
+    </view>
+  </view>
+</view>

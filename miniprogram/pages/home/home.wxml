@@ -1,0 +1,61 @@
+<!--pages/home/home.wxml-->
+<!-- 1.在home.json文件中注册组件，以键值对的形式注册 -->
+<!-- 2.使用自定义组件 -->
+<!-- <my-cpn/> -->
+
+<!-- 3.自定义组件的样式细节 -->
+<!-- <my-cpn/> -->
+
+<!-- 4.给自定义组件传递数据和样式 -->
+<!-- 步骤：1.先创建自定义组件，并创建需要传递的组件及对应内容 -> 
+          2.在下一个被传递的页面中的.json文件中进行注册 "usingComponents": {"my-cpn": "/components/my-cpn/my-cpn"} 
+          3.在<my-cpn>组件中的my-cpn.js中的properties{}中定义对应展示的属性，并可以通过observer方法进行监听
+          4.然后在使用该组件的页面home.wxml中使用该组件，并通过my-cpn.js中的properties{}中定义的属性名进行传值
+          5.通过在my-cpn.wxml中展示的组件中添加类名，然后在my-cpn.js中定义externalClasses: ['title-style']用于传递样式6.然后在home.wxml中的<my-cpn>中定义这个样式类，重新定义值，然后在home.wxss中定义样式即可传递至my-cpn组件-->
+<!-- <my-cpn title="哈哈哈" title-style="titleStyle1"/> -->
+<!-- <my-cpn title="呵呵呵" title-style="titleStyle2"/> -->
+<!-- <my-cpn title-style="titleStyle3"/> -->
+
+<!-- 5.将组件中的自定义事件传递到页面 -->
+<!-- 步骤：1.将自定义组件my-cpn中的点击事件在methods中通过this.triggerEvent('increament', {}, {})将事件传递到home中
+          2.然后在home.wxml中通过 <my-cpn bind:increament="handerIncreament"/>方式进行监听这个事件
+          3.最后在home.js中处理这个监听的函数-->
+<!-- <view>当前计数：{{counter}}</view>
+<my-cpn bind:increament="handerIncreament"/> -->
+
+<!-- 6.tab-control的练习 -->
+<!-- <tab-control title="{{['流行','新款','精选']}}"
+             bind:itemclick="handleTabClick"
+             class="set-class"/> -->
+
+<!-- 7.直接选中组件修改数据/调用方法 -->
+<!-- <my-sel class="sel-class" id=""/>
+<button size="mini" bind:tap="handerIncreamentCpn">修改组件内的数据</button> -->
+
+<!-- 8.插槽的使用 -->
+<!-- 8.1单个插槽的使用 -->
+<!-- <my-slot>
+  <button size="mini">插入的按钮</button>
+</my-slot> -->
+
+<!-- 8.2多个插槽的使用 -->
+<!-- 注意事项: 1.给每一个插槽起一个名字: name属性
+              2.必须在component对象中添加一个选项: options -> multipleSlots: true
+  -->
+<!-- <my-slot>
+  <button size="mini" slot="slot2">我是插槽按钮</button>
+  <slider slot="slot1"></slider>
+  <view slot="slot3">我是插槽内容</view>
+</my-slot> -->
+
+<!-- 演练组件被移除掉时执行的生命周期函数：detached() -->
+<!-- <button size="mini" bind:tap="handleChangeShow">切换按钮</button>
+<block wx:if="{{isShow}}">
+  <my-slot>
+  <button size="mini" slot="slot2">我是插槽按钮</button>
+  <slider slot="slot1"></slider>
+  <view slot="slot3">我是插槽内容</view>
+</my-slot>
+</block> -->
+
+<view>哈哈哈哈哈哈！</view>

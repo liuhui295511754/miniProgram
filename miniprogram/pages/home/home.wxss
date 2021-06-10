@@ -1,0 +1,12 @@
+/* pages/home/home.wxss */
+.titleStyle1 {
+  color: skyblue;
+  font-weight: 700;
+}
+.titleStyle2 {
+  color: pink;
+  text-decoration:underline;
+}
+.titleStyle3 {
+  color: palevioletred;
+}

@@ -1,0 +1,37 @@
+/* pages/scroll/scroll.wxss */
+.contailer1 {
+  background-color: pink;
+  white-space: nowrap;
+}
+.item1 {
+  height: 100px;
+  width: 100px;
+  background-color: skyblue;
+  display: inline-block;
+  margin: 10px;
+}
+
+.contailer2 {
+  height: 200px;
+  background-color: orange;
+}
+
+.item2 {
+  height: 100px;
+  background-color: slateblue;
+  margin: 10px;
+}
+.contailer3 {
+  height: 200px;
+  background-color: powderblue;
+}
+.item3 {
+  height: 100px;
+  background-color: rosybrown;
+  margin: 10px;
+}
+
+
+.active {
+  color: pink;
+}

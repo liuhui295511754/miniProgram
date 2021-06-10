@@ -1,0 +1,26 @@
+<!--pages/main/main.wxml-->
+<!-- 1.分享按钮 -->
+<button size="mini" open-type="share">分享</button>
+
+<!-- 2.navigator页面跳转基本使用 -->
+<navigator url="/pages/detail/detail">跳到详情页</navigator>
+
+<!-- 3.navigator中属性：open-type -->
+<navigator url="/pages/detail/detail"
+           open-type="redirect">
+  跳到详情页(redirect)
+</navigator>
+<!-- 4.switchTab  -->
+<navigator url="/pages/home/home"
+           open-type="switchTab">
+  跳到主页(switchTab)
+</navigator>
+<navigator url="/pages/detail/detail"
+           open-type="reLaunch">
+  跳到detail(reLaunch)
+</navigator>
+<!-- 5.跳转过程实现数据传递 -->
+<navigator url="/pages/detail/detail?name=kevin&age=20&height=188">
+  跳到detail(数据传递)
+</navigator>
+<view>{{title}}</view>

@@ -6,6 +6,12 @@ App({
    */
   onLaunch: function () {
     // console.log('小程序初始化完成');
+    // 登录操作
+    // wx.login({
+    //   success(res) {
+    //     console.log(res);
+    //   }
+    // })
 
   },
 
